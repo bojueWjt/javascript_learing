@@ -21,6 +21,9 @@ var Person = function(Name,Email,Age){
 	this.age = Age;
 }
 
+var prop = new Person();
+Person.prototype = prop;
+
 var person = new Person('wjt','322414@qq.com',23);
 console.log(person); 
 
@@ -38,12 +41,11 @@ console.log(person.constructor);
 
 //hasOwnProperty(propertyName) 这个方法用来判断当前传入的属性是否属于当前实例的属性（而不是存在在原型中）
 
-console.log(person.hasOwnProperty(name));
+console.log(person.hasOwnProperty('name'));
 
 //isPrototypeOf(Obj)判断传入的对象的原型链中，是否有调用方法的对象
 
-var prop = new Object();
-person.prototype = prop;
+
 
 console.log(prop.isPrototypeOf(person)); 
 
