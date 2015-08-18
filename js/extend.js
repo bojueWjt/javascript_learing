@@ -50,19 +50,20 @@ console.log(p1.id);  //显而易见这是undefined
 function Person(name , age){
 	this.name = name;
 	this.age = age;
+	console.log('-------------nicnini-------------');
 }
 
 Person.prototype.id = 10;
 
 function Boy(name , age ,friend){
 	this.name = name ;
-	this.age = age ;
-	this.friend = friend;
+	Person.call(this,name,age);
 }
 
 Boy.prototype = new Person();
 
 var p1 = new Boy('haiming',23,'shijie');
+var p2 = new Boy('haiming',23,'shijie');
 
 console.log(p1.name);
 console.log(p1.friend);
