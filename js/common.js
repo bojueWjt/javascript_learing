@@ -92,7 +92,8 @@ ninico.extend = function( sub, sup){
 		sup.prototype.constructor = sup;
 	}
 
-	sub.superClassPrototype = sup.prototype;
+
+	sub.superClassPrototype = sup.prototype;console.log(sub.superClassPrototype)
 	f = null;
 }
 
