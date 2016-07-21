@@ -12,7 +12,7 @@ console.log(test(10,20));
 console.log(test(10,20,30));
 
 //arguments中有一个属性叫callee 指向函数本身
-
+// ECMA5 标准中已经将callee移除，严格模式下不可食用
 
 var diedai = function(num){
 	if(num===1){
