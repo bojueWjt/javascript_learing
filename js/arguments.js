@@ -12,7 +12,8 @@ console.log(test(10,20));
 console.log(test(10,20,30));
 
 //arguments中有一个属性叫callee 指向函数本身
-// ECMA5 标准中已经将callee移除，严格模式下不可食用
+// ECMA5 标准中已经将callee移除，严格模式下不可使用
+// http://stackoverflow.com/questions/103598/why-was-the-arguments-callee-caller-property-deprecated-in-javascript/235760#235760
 
 var diedai = function(num){
 	if(num===1){
